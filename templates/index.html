@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333;">
+    <header style="background-color: #004d40; color: #ffffff; padding: 20px; text-align: center;">
+        <h1>CrediSense: AI Driven Sanctions</h1>
+        <nav>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center;">
+                <li style="margin: 0 15px;"><a href="{{ url_for('loan_prediction') }}" style="color: #ffffff; text-decoration: none; font-weight: bold;">Loan Prediction</a></li>
+                <li style="margin: 0 15px;"><a href="{{ url_for('loan_valuation') }}" style="color: #ffffff; text-decoration: none; font-weight: bold;">Loan Valuation</a></li>
+                <li style="margin: 0 15px;"><a href="{{ url_for('risk_assessment') }}" style="color: #ffffff; text-decoration: none; font-weight: bold;">Risk Assessment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="max-width: 1200px; margin: 20px auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); text-align: center;">
+        <h2>Welcome to the Loan Application System</h2>
+        <p>Select a feature from the menu to get started.</p>
+
+        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <div style="background-color: #e0f7fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); width: 30%;">
+                <h3>Loan Prediction</h3>
+                <p>Predict your loan eligibility based on various parameters.</p>
+                <a href="{{ url_for('loan_prediction') }}" style="display: inline-block; padding: 10px 15px; background-color: #00796b; color: #ffffff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s;">Get Started</a>
+            </div>
+            <div style="background-color: #e0f7fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); width: 30%;">
+                <h3>Loan Valuation</h3>
+                <p>Evaluate the worth of your loan based on financial metrics.</p>
+                <a href="{{ url_for('loan_valuation') }}" style="display: inline-block; padding: 10px 15px; background-color: #00796b; color: #ffffff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s;">Get Started</a>
+            </div>
+            <div style="background-color: #e0f7fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); width: 30%;">
+                <h3>Risk Assessment</h3>
+                <p>Analyze the risks associated with your loan application.</p>
+                <a href="{{ url_for('risk_assessment') }}" style="display: inline-block; padding: 10px 15px; background-color: #00796b; color: #ffffff; border-radius: 5px; text-decoration: none; transition: background-color 0.3s;">Get Started</a>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: #004d40; color: #ffffff; text-align: center; padding: 10px 0; position: absolute; bottom: 0; width: 100%;">
+        <p>© 2024 Credisense: AI Driven Sanctions</p>
+    </footer>
+</body>
+</html>

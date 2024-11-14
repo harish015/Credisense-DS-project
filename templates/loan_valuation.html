@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-align:center;">Loan Valuation</h2>
+<form method="POST" style="max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); background-color: #f9f9f9;">
+    <label for="annual_salary">Annual Salary:</label><br>
+    <input type="text" name="annual_salary" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"><br>
+
+    <label for="credit_score">Credit Score:</label><br>
+    <input type="text" name="credit_score" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"><br>
+
+    <label for="outstanding_loan_amount">Outstanding Loan Amount:</label><br>
+    <input type="text" name="outstanding_loan_amount" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);"><br>
+
+    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">Calculate</button>
+</form>
+
+{% if recommended_loan_amount is not none %}
+    <h3>Recommended Loan Amount: {{ recommended_loan_amount }}</h3>
+{% endif %}
+{% endblock %}

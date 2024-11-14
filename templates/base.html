@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credisense</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #004d40; color: white; padding: 10px; text-align: center; }
+        nav { display: flex; justify-content: center; padding: 10px; }
+        nav a { margin: 0 15px; color: white; text-decoration: none; }
+        footer { background-color: #004d40; color: white; text-align: center; padding: 10px; position: relative; width: 100%; bottom: 0; }
+        .container { padding: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Credisense: AI Driven Sanctions</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('loan_prediction') }}">Loan Prediction</a>
+        <a href="{{ url_for('loan_valuation') }}">Loan Valuation</a>
+        <a href="{{ url_for('risk_assessment') }}">Risk Assessment</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>&copy; Credisense: AI Driven Sanctions</p>
+    </footer>
+</body>
+</html>
