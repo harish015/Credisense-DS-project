@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Loan Prediction</title>
+    <style>
+        /* Inline CSS for quick setup */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .header, .footer { background-color: #4CAF50; color: white; padding: 10px; text-align: center; }
+        .nav { display: flex; justify-content: center; gap: 15px; }
+        .nav a { color: white; text-decoration: none; font-size: 1.2em; }
+        .content { text-align: center; margin: 20px; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>About Us</h1>
+        <div class="nav">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('services') }}">Services</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Our Mission</h2>
+        <p>Our Loan Prediction System leverages advanced machine learning models to provide reliable loan eligibility predictions.</p>
+        <p>With a focus on accuracy and user satisfaction, we aim to streamline the loan application process for individuals and institutions.</p>
+        <h2>Our Team</h2>
+        <p>We are a dedicated team of AI and data science experts committed to delivering powerful tools for financial risk assessment and loan valuation.</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Loan Prediction System. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

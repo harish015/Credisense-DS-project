@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Loan Services</h1>
+
+<form action="/process_loan" method="POST">
+    <h2>Loan Evaluation</h2>
+    <label for="loan_amount">Loan Amount:</label>
+    <input type="number" id="loan_amount" name="loan_amount" required>
+    
+    <label for="term">Loan Term (years):</label>
+    <input type="number" id="term" name="term" required>
+    
+    <label for="interest_rate">Interest Rate (%):</label>
+    <input type="number" id="interest_rate" name="interest_rate" step="0.01" required>
+    
+    <h2>Risk Assessment</h2>
+    <label for="credit_score">Credit Score:</label>
+    <input type="number" id="credit_score" name="credit_score" required>
+    
+    <label for="dti_ratio">Debt-to-Income Ratio (%):</label>
+    <input type="number" id="dti_ratio" name="dti_ratio" step="0.01" required>
+    
+    <h2>Loan Prediction</h2>
+    <label for="annual_income">Annual Income:</label>
+    <input type="number" id="annual_income" name="annual_income" required>
+    
+    <label for="revolving_balance">Revolving Balance:</label>
+    <input type="number" id="revolving_balance" name="revolving_balance" required>
+
+    <button type="submit">Predict</button>
+</form>
+
+</body>
+</html>
